@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width-device-widht, initial-scale=1.0">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <title>Validador de formulários</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,14 +13,14 @@
         </div>
         <div class="rightside">
             <h1>Crie uma conta</h1>
-            <form method = "POST" class="validator">
+            <form method = "POST" action="cadastro.php" class="validator">
                 <label>
                     <a>Nome:</a>
-                    <input type="text" name="name" />
+                    <input type="text" name="name" data-rules="required|min=2"/>
                 </label>
                 <label>
                     <a>Email:</a>
-                    <input type="text" name="email" />
+                    <input type="text" name="email" data-rules="required"/>
                 </label>
                 <label>
                     <a>Senha:</a>
