@@ -37,6 +37,14 @@ let validatorFunction = {
                             return 'Campo deve ter pelo menos '+rulesDetails[1]+' caracteres';
                         }
                     break;
+                    case 'email':
+                        if(input.value != '') {
+                            let regex = /^([\w\-]+\.)*[\w\- ]+@([\w\- ]+\.)+([\w\-]{2,3})$/
+                            if(!regex.test(input.value.toLowerCase())) {
+                                return 'E-mail inválido';
+                            }
+                        }
+                    break;
                 }
             }
         }
